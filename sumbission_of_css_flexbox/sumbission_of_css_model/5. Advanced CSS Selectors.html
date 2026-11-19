@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors</title>
+
+    <style>
+
+        /* ==============================
+           ELEMENT SELECTOR
+           Selects all elements of a type
+           ============================== */
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+
+        /* ==============================
+           ATTRIBUTE SELECTOR
+           Selects input having type="text"
+           ============================== */
+
+        input[type="text"] {
+            border: 3px solid blue;
+            padding: 10px;
+        }
+
+
+        /* ==============================
+           ATTRIBUTE SELECTOR
+           [href^="https"] means href starts
+           with "https"
+           ============================== */
+
+        a[href^="https"] {
+            color: green;
+            font-weight: bold;
+        }
+
+
+        /* ==============================
+           PSEUDO-CLASS :hover
+           Applies when mouse is over item
+           ============================== */
+
+        li:hover {
+            background-color: lightblue;
+        }
+
+
+        /* ==============================
+           PSEUDO-CLASS :focus
+           Applies when input is selected
+           ============================== */
+
+        input:focus {
+            outline: 3px solid orange;
+        }
+
+
+        /* ==============================
+           PSEUDO-CLASS :nth-child()
+           Selects the second list item
+           ============================== */
+
+        li:nth-child(2) {
+            color: red;
+            font-weight: bold;
+        }
+
+
+        /* ==============================
+           PSEUDO-ELEMENT ::before
+           Adds content before heading
+           ============================== */
+
+        h2::before {
+            content: "★ ";
+        }
+
+
+        /* ==============================
+           PSEUDO-ELEMENT ::after
+           Adds content after heading
+           ============================== */
+
+        h2::after {
+            content: " ✓";
+        }
+
+
+        /* ==============================
+           CHILD COMBINATOR (>)
+           Selects direct children only
+           ============================== */
+
+        .parent > p {
+            color: purple;
+        }
+
+
+        /* ==============================
+           ADJACENT SIBLING COMBINATOR (+)
+           Selects the paragraph immediately
+           following h3
+           ============================== */
+
+        h3 + p {
+            color: brown;
+        }
+
+
+        /* ==============================
+           GENERAL SIBLING COMBINATOR (~)
+           Selects all p elements after h4
+           ============================== */
+
+        h4 ~ p {
+            background-color: #eee;
+            padding: 5px;
+        }
+
+
+        /* ==============================
+           DESCENDANT COMBINATOR (space)
+           Selects all p elements inside
+           .descendant
+           ============================== */
+
+        .descendant p {
+            color: darkblue;
+        }
+
+
+        .box {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Advanced CSS Selectors</h1>
+
+
+    <!-- Attribute Selectors -->
+
+    <div class="box">
+
+        <h2>Attribute Selectors</h2>
+
+        <input type="text" placeholder="Enter your name">
+
+        <br><br>
+
+        <a href="https://www.google.com">
+            HTTPS Link
+        </a>
+
+        <br><br>
+
+        <a href="http://example.com">
+            HTTP Link
+        </a>
+
+    </div>
+
+
+    <!-- Pseudo Classes -->
+
+    <div class="box">
+
+        <h2>Pseudo Classes</h2>
+
+        <ul>
+            <li>First Item</li>
+            <li>Second Item</li>
+            <li>Third Item</li>
+            <li>Fourth Item</li>
+        </ul>
+
+        <input type="text" placeholder="Click here and focus">
+
+    </div>
+
+
+    <!-- Child Combinator > -->
+
+    <div class="box parent">
+
+        <h2>Child Combinator</h2>
+
+        <p>Direct child paragraph</p>
+
+        <div>
+            <p>Nested paragraph</p>
+        </div>
+
+    </div>
+
+
+    <!-- Adjacent Sibling + -->
+
+    <div class="box">
+
+        <h3>Adjacent Sibling</h3>
+
+        <p>This paragraph comes immediately after h3.</p>
+
+        <p>This paragraph is not immediately after h3.</p>
+
+    </div>
+
+
+    <!-- General Sibling ~ -->
+
+    <div class="box">
+
+        <h4>General Sibling</h4>
+
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+
+    </div>
+
+
+    <!-- Descendant Combinator -->
+
+    <div class="box descendant">
+
+        <h2>Descendant Selector</h2>
+
+        <p>This paragraph is inside the div.</p>
+
+        <div>
+            <p>This paragraph is deeply nested.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

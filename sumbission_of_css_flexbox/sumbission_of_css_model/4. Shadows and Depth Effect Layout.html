@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Depth</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eeeeee;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 40px;
+
+            /* Text shadow */
+            text-shadow: 3px 3px 5px gray;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 280px;
+            height: 250px;
+            background-color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+        /* Small shadow */
+        .card1 {
+            box-shadow: 5px 5px 10px gray;
+        }
+
+        /* Large shadow */
+        .card2 {
+            box-shadow: 10px 10px 20px gray;
+        }
+
+        /* Inset shadow */
+        .card3 {
+            box-shadow: inset 0 0 20px gray;
+        }
+
+        /* Hover effect */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px gray;
+        }
+
+        .card h2 {
+            text-shadow: 2px 2px 4px gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Shadows and Depth Effects</h1>
+
+    <div class="container">
+
+        <div class="card card1">
+            <h2>Profile 1</h2>
+            <p>Small Shadow</p>
+        </div>
+
+        <div class="card card2">
+            <h2>Profile 2</h2>
+            <p>Large Shadow</p>
+        </div>
+
+        <div class="card card3">
+            <h2>Profile 3</h2>
+            <p>Inset Shadow</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
