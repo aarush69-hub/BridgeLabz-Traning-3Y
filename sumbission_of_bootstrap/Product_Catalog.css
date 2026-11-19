@@ -1,0 +1,21 @@
+/* Product card transition */
+
+.product-card {
+    transition: 0.3s;
+}
+
+
+/* Card hover effect */
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px #aaa !important;
+}
+
+
+/* Keep product images same height */
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}

@@ -1,0 +1,18 @@
+/* Food image */
+
+figure img {
+    max-height: 450px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* List group hover */
+
+.list-group-item {
+    transition: 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}

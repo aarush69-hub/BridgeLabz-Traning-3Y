@@ -1,0 +1,26 @@
+/* Custom hero section */
+
+.hero {
+    background-color: #f4f8ff;
+}
+
+
+/* Hero visual */
+
+.hero-box {
+    font-size: 150px;
+}
+
+
+/* Smooth card effect */
+
+.card {
+    transition: 0.3s;
+}
+
+
+/* Card hover */
+
+.card:hover {
+    transform: translateY(-5px);
+}

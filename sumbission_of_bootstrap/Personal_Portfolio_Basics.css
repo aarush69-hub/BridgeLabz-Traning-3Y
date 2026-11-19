@@ -1,0 +1,21 @@
+/* Profile image */
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+/* Button hover effect */
+
+.btn {
+    transition: 0.3s;
+}
+
+
+/* Slight hover movement */
+
+.btn:hover {
+    transform: translateY(-2px);
+}
