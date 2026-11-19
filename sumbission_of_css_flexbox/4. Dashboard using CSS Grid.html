@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .dashboard {
+            min-height: 100vh;
+
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr;
+
+            gap: 15px;
+        }
+
+        header {
+            grid-column: 1 / -1;
+            background-color: #333;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        aside {
+            background-color: #eee;
+            padding: 30px;
+        }
+
+        aside h2 {
+            margin-bottom: 25px;
+        }
+
+        aside a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .content {
+            padding: 20px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .box {
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            padding: 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 22px;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .large {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 700px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto 1fr;
+            }
+
+            header {
+                grid-column: 1;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .large {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header>
+            <h1>My Dashboard</h1>
+        </header>
+
+        <aside>
+            <h2>Menu</h2>
+
+            <a href="#">Dashboard</a>
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </aside>
+
+        <main class="content">
+
+            <div class="box">
+                Sales
+            </div>
+
+            <div class="box">
+                Users
+            </div>
+
+            <div class="box large">
+                Analytics
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
